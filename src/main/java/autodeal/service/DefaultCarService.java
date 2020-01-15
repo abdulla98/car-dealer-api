@@ -164,11 +164,26 @@ public class DefaultCarService implements CarService {
 
     @Override
     public void update(UUID id) {
+        Car newCar = new Car();
+        newCar.setId(id);
+        newCar.setMake(newCar.getMake());
+        newCar.setModel(newCar.getModel());
+        newCar.setDescription(newCar.getDescription());
+        newCar.setFuel(newCar.getFuel());
+        newCar.setImage(newCar.getImage());
+        newCar.setPrice(newCar.getPrice());
+        newCar.setPower(newCar.getPower());
+        newCar.setMileage(newCar.getMileage());
+        newCar.setDate(newCar.getDate());
+        newCar.setUsername(newCar.getUsername());
 
+        carRepository.save(newCar);
     }
 
     @Override
     public void deleteCar(UUID id) {
-
+        Car car = carRepository.findOneById(id);
+        if (car != null)
+            carRepository.delete(car);
     }
 }

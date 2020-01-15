@@ -56,6 +56,16 @@ public class CarController {
         return carService.save(carInput);
     }
 
+    @DeleteMapping("/car/delete/{id}")
+    public void deleteCar(@PathVariable UUID id) {
+        carService.deleteCar(id);
+    }
+
+    @PutMapping("/car/update/{id}")
+    public void updateCar(@PathVariable UUID id) {
+        carService.update(id);
+    }
+
 
 }
 
