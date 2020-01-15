@@ -169,6 +169,8 @@ public class DefaultCarService implements CarService {
 
     @Override
     public void deleteCar(UUID id) {
-
+        Car car = carRepository.findOneById(id);
+        if (car != null)
+            carRepository.delete(car);
     }
 }
