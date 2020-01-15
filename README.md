@@ -64,7 +64,7 @@ Second, configure the [database](#database).
 
 ## Database
 
-1. Create a PostgreSQL database using the `practical.sql` script provided in the root folder.
+1. Create a PostgreSQL database using the `autodeal.sql` script provided in the root folder.
 
 1. Add credentials to `/src/main/resources/application.properties`.
 
@@ -93,41 +93,43 @@ After you configure the database the next thing you should do is to open your ID
 ### Car Endpoints
 
 Get all cars
-* URL localhost:8080/cars
+* URL ```localhost:8080/cars```, METHOD = GET
 
 Get cars by make
-* URL localhost:8080/cars/{make}
+* URL ```localhost:8080/cars/{make}```, METHOD = GET 
 
 Get cars by make and model
-* URL localhost:8080/cars/{make}/{model}
+* URL ```localhost:8080/cars/{make}/{model}```, METHOD = GET 
 
 Get cars by make and fuel
-* URL localhost:8080/getCarsByMakeAndFuel/{make}/{fuel}
+* URL ```localhost:8080/getCarsByMakeAndFuel/{make}/{fuel}```, METHOD = GET 
 
 Get cars by fuel 
-* URL localhost:8080/carsbyfuel/{fuel}
+* URL ```localhost:8080/carsbyfuel/{fuel}```, METHOD = GET 
 
 Insert a new car
-* URL localhost:8080/car/save
+* URL ```localhost:8080/car/save```, METHOT = POST
 
 Delete a car
-* URL localhost:8080/car/delete/{id}
+* URL ```localhost:8080/car/delete/{id}```, METHOD = DELETE
 
 Update a car
-* URL localhost:8080//car/update/{id}
+* URL ```localhost:8080//car/update/{id}```, METHOD = PUT
 
 ### User Endpoints
 
+There is no authentication provided for the user
+
 Get all users
-* URL localhost:8080/users
+* URL ```localhost:8080/users```, METHOD = GET
 
 Find a user by email
-* URL localhost:8080/users/{email}
+* URL ```localhost:8080/users/{email}```, METHOD = GET
 
 Create a new user
-* URL localhost:8080/save/user
+* URL ```localhost:8080/save/user```, METHOD = POST
 
 Delete a user
-* URL localhost:8080/user/delete/{email}
+* URL ```localhost:8080/user/delete/{email}```, METHOD = DELETE
 
 
