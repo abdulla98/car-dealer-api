@@ -61,6 +61,11 @@ public class CarController {
         carService.deleteCar(id);
     }
 
+    @PutMapping("/car/update/{id}")
+    public void updateCar(@PathVariable UUID id) {
+        carService.update(id);
+    }
+
 
 }
 
