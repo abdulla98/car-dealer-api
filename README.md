@@ -52,7 +52,7 @@ First, clone the project:
 
 ```bash
 
-$ git clone
+$ git clone https://github.com/abdulla98/car-dealer-api.git
 
 ```
 
