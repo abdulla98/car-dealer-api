@@ -62,8 +62,8 @@ public class CarController {
     }
 
     @PutMapping("/car/update/{id}")
-    public void updateCar(@PathVariable UUID id) {
-        carService.update(id);
+    public void updateCar(@PathVariable UUID id, @RequestBody CarInput carInput) {
+        carService.update(id, carInput);
     }
 
 
