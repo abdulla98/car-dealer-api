@@ -162,22 +162,37 @@ public class DefaultCarService implements CarService {
         return carRepository.save(newCar);
     }
 
-    @Override
-    public void update(UUID id) {
-        Car newCar = new Car();
-        newCar.setId(id);
-        newCar.setMake(newCar.getMake());
-        newCar.setModel(newCar.getModel());
-        newCar.setDescription(newCar.getDescription());
-        newCar.setFuel(newCar.getFuel());
-        newCar.setImage(newCar.getImage());
-        newCar.setPrice(newCar.getPrice());
-        newCar.setPower(newCar.getPower());
-        newCar.setMileage(newCar.getMileage());
-        newCar.setDate(newCar.getDate());
-        newCar.setUsername(newCar.getUsername());
+//    @Override
+//    public void update(UUID id, Car car) {
+//        Car newCar = new Car();
+//        newCar.setId(id);
+//        newCar.setMake(newCar.getMake());
+//        newCar.setModel(newCar.getModel());
+//        newCar.setDescription(newCar.getDescription());
+//        newCar.setFuel(newCar.getFuel());
+//        newCar.setImage(newCar.getImage());
+//        newCar.setPrice(newCar.getPrice());
+//        newCar.setPower(newCar.getPower());
+//        newCar.setMileage(newCar.getMileage());
+//        newCar.setDate(newCar.getDate());
+//        newCar.setUsername(newCar.getUsername());
+//
+//        carRepository.save(newCar);
+//    }
 
-        carRepository.save(newCar);
+
+
+    @Override
+    public Car update(UUID id, CarInput carInput) {
+        Car carUpdate = carRepository.findOneById(id);
+
+        if(carUpdate==null) {
+            return null;
+        }
+
+        carRepository.delete(carUpdate);
+        return this.save(carInput);
+
     }
 
     @Override

@@ -25,4 +25,13 @@ class CarServiceTest {
         assertNotNull(carService.findAllByMake(make));
     }
 
+    @Test
+    void testFindCarByMakeAndModel() {
+        String make = "BMW";
+        String model = "X1";
+        assertNotNull(carService.findAllByMakeAndModel(make, model));
+    }
+
+
+
 }

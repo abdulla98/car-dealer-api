@@ -62,7 +62,7 @@ public interface CarService {
 
     Car save(CarInput carInput);
 
-    void update(UUID id);
+    Car update(UUID id, CarInput carInput);
 
     void deleteCar(UUID id);
 }
