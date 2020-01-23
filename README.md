@@ -142,6 +142,17 @@ Find a user by email
 
 Create a new user
 * URL ```localhost:8080/save/user```, METHOD = POST
+```
+{
+	"username": "johndoe",
+	"name": "John Doe",
+	"email": "johndoe@gmail.com",
+	"phonenumber": 111222333,
+	"address": "John Street",
+	"password": "John123"
+	
+}
+```
 
 Delete a user
 * URL ```localhost:8080/user/delete/{email}```, METHOD = DELETE
