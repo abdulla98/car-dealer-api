@@ -109,6 +109,20 @@ Get cars by fuel
 
 Insert a new car
 * URL ```localhost:8080/car/save```, METHOT = POST
+```
+{
+	"make": "Fiat",
+	"model": "Punto",
+	"description": "Full oprema, pali vozi",
+	"fuel": "Diesel",
+	"image": "https://en.wikipedia.org/wiki/Fiat_Punto#/media/File:2006_Fiat_Grande_Punto_Sporting_T-J_1.4_Front.jpg",
+	"price": 2800,
+	"power": "78KW",
+	"mileage": 92000,
+	"date": "22-01-2020",
+	"username": "abdullabakija"
+}
+```
 
 Delete a car
 * URL ```localhost:8080/car/delete/{id}```, METHOD = DELETE
