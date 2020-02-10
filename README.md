@@ -109,6 +109,20 @@ Get cars by fuel
 
 Insert a new car
 * URL ```localhost:8080/car/save```, METHOT = POST
+```
+{
+	"make": "Fiat",
+	"model": "Punto",
+	"description": "Full oprema, pali vozi",
+	"fuel": "Diesel",
+	"image": "https://en.wikipedia.org/wiki/Fiat_Punto#/media/File:2006_Fiat_Grande_Punto_Sporting_T-J_1.4_Front.jpg",
+	"price": 2800,
+	"power": "78KW",
+	"mileage": 92000,
+	"date": "22-01-2020",
+	"username": "abdullabakija"
+}
+```
 
 Delete a car
 * URL ```localhost:8080/car/delete/{id}```, METHOD = DELETE
@@ -128,6 +142,17 @@ Find a user by email
 
 Create a new user
 * URL ```localhost:8080/save/user```, METHOD = POST
+```
+{
+	"username": "johndoe",
+	"name": "John Doe",
+	"email": "johndoe@gmail.com",
+	"phonenumber": 111222333,
+	"address": "John Street",
+	"password": "John123"
+	
+}
+```
 
 Delete a user
 * URL ```localhost:8080/user/delete/{email}```, METHOD = DELETE

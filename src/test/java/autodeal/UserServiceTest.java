@@ -1,6 +1,8 @@
 package autodeal;
 
 
+import autodeal.input.UserInput;
+import autodeal.pojo.User;
 import autodeal.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,11 @@ public class UserServiceTest {
     @Test
     void testGetAllUsers() {
         assertNotNull(userService.findAll());
+    }
+
+    @Test
+    void testSaveUser() {
+        assertNotNull(userService.save(new UserInput("Test username", "Test name", "Test email", 2222222, "Test address", "Test password")));
     }
 
 }
